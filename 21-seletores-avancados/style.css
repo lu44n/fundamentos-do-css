@@ -1,0 +1,42 @@
+/* seletor: nth-child() */
+li:nth-child(2) {
+    color: #f00;
+}
+
+li:nth-child(3n) {
+    color: #00f;
+}
+
+/* alterações visuais ao colocar o cursor em cima do elemento */
+li:hover {
+    background-color: #777;
+}
+
+/* alterações visuais ao clicar em uma caixa de input por exemplo */
+input:focus {
+    background-color: #f00;
+}
+
+/* Pseudo-Elementos - ::before e ::after */
+li::before {
+    content: "(antes) ";
+}
+
+li::after {
+    content: " (depois)";
+}
+
+/* seleciona apenas o primeiro filho de li */
+li:first-child {
+    color: rgb(255, 174, 0);
+}
+
+/* seleciona o ultimo filho de li */
+li:last-child {
+    color: rgb(255, 0, 179);
+}
+
+/* seletor de negação, ou seja, tudo exceto o que é passado no parâmetro */
+li:not(:first-child){
+    color: rgb(0, 255, 255);
+}

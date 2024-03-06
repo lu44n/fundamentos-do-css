@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    border-bottom: 1px solid #232323;
+    text-align: center;
+    padding: 25px;
+}
+
+h1 {
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.introduction {
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 15px;
+}
+
+.introduction h2 {
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.introduction button {
+    margin-top: 20px;
+    background-color: #030308;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.image {
+    text-align: center;
+}
+
+.image img {
+    width: 600px;
+    height: 400px;
+}
+
+.catalogo {
+    text-align: center;
+    padding-top: 35px;
+    padding-bottom: 15px;
+}
+
+.catalogo h2 {
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.catalogo p {
+    margin-bottom: 20px;
+}
+
+.lista li {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+li > button {
+    background-color: #43ABF6;
+    color: #fff;
+    border: 1px solid transparent;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.ver-mais {
+    font-weight: 600;
+    text-transform: uppercase;
+    background-color: #030308;
+}
+
+.propaganda {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.propaganda h2 {
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.propaganda button {
+    margin-top: 20px;
+    background-color: #030308;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;   
+}
+
+footer {
+    text-align: center;
+    background-color: #030308;
+    color: #fff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}

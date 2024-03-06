@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+    font-family: "Oxygen",system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-background: #030207;
+    --color-white: #fff;
+    --color-blue: #1474b4;
+}
+
+body {
+    background-color: var(--color-background);
+    color: var(--color-white);
+}
+
+a {
+    color: var(--color-blue);
+}
+
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.1), var(--color-background));
+    position: relative;
+    min-height: 100vh; /* Garante que a altura mínima sempre seja 100% da viewport height */
+}
+
+.hero__background {
+    width: 100%; /* Ficar com 100% da largura*/
+    height: 100vh; /* Ficar com 100 da viewport height */
+    object-fit: cover; /* Encaixe do vídeo ajustado para cobrir a tela */
+    position: absolute; /* Uma propriedade que faz com que esse elemento fique fora da pilha padrão do HTML, e os outros elementos vão aparecer por cima dele */
+    top: 0; /* A propriedade top do CSS é utilizada para posicionar elementos relativos ou absolutos em relação ao elemento pai */
+    z-index: -10; /* Ajusta a profundidade de um elemento fez com que este elemento fique bem fundo em relação aos outros */
+}
+
+.hero__foreground {
+    color: var(--color-white);
+    text-align: center;
+    padding-top: 40vh;
+}
+
+.hero__title {
+    font-size: 5rem;
+    font-weight: 300;
+}
+
+.hero__text {
+    margin-top: 2rem;
+    letter-spacing: 0.5rem;
+    text-transform: uppercase;
+}
+
+.section {
+    overflow: hidden; /* Controla a forma de transbordamento dos elementos, quando os elementos filhos são maiores que o elemento pai, 
+    usamos ele nesse caso por conta do uso da propriedade float, em que esse ''hidden'' vai considerar a imagem como um todo para calcular a altura da seção  */
+    text-align: center;
+    padding: 0 8rem;
+}
+
+.section__title {
+    font-size: 3rem;
+    font-weight: 300;
+    margin: 4rem auto;
+}
+
+.section__img, 
+.section__img-inline {
+    border-radius: .75rem;
+    /* eixo x, eixo y, blur, expansão ou recuo, cor */
+    box-shadow: 0 1rem 2rem -0.5rem rgba(20, 116, 180, 0.25);
+    object-fit: cover;
+    object-position: top; /* Indica de onde a imagem começara a ser exibida */
+    position: relative;
+    max-height: 30rem;
+    width: 100%;
+}
+
+.section__text, 
+.section__text-inline {
+    font-size: 1.25rem;
+    line-height: 1.75; /* Espaço entre linhas de um parágrafo */
+    margin: 4rem auto;
+}
+
+.section__img-inline {
+    border-top-left-radius: 4rem;
+    border-bottom-right-radius: 4rem;
+    float: left; /* Faz a imagem flutuar na página, isso meio que vai empurrar ela pra alguma direção */
+    height: 25rem;
+    width: 20rem;
+    margin-right: 4rem;
+    margin-bottom: 2rem;
+}
+
+.section__text-inline {
+    text-align: left;
+    margin-top: 6rem;
+}
+
+.section__text-inline > p {
+    margin-top: 1.5rem;
+}
+
+#hangouts img {
+    object-position: center;
+}
+
+.gallery__img {
+    border-radius: .75rem;
+    height: 16rem;
+    width: 16rem;
+    object-fit: cover;
+    transform: rotate(-2deg); /* deg = graus */
+}
+
+.gallery__img-wrapper {
+    display: inline-block;
+    position: relative;
+}
+
+.gallery__img-wrapper + .gallery__img-wrapper {
+    margin-left: 3rem;
+    margin-top: 3rem;
+}
+
+.gallery__img-wrapper:nth-child(even) > .gallery__img {
+    top: 1rem;
+    transform: rotate(2deg);
+}
+
+.gallery__img-wrapper::after {
+    content: "";
+    background-color: rgb(228, 26, 26);
+    border-radius: 999px;
+    display: block;
+    height: 1.25rem;
+    width: 1.25rem;
+    position: absolute;
+    top: 0.25rem;
+    right: 1rem;
+}
+
+.gallery__img-wrapper:nth-child(even)::after {
+    left: 1rem;
+}
+
+.footer {
+    margin-top: 4rem;
+    padding: 2rem;
+    text-align: center;
+}
